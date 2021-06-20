@@ -1,24 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClosuresDelegate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morpheus" translatesAutoresizingMaskIntoConstraints="NO" id="hGH-Fh-sWC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avk-Ec-XiC">
+                                <rect key="frame" x="46" y="780" width="318" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="318" id="Dpr-Lp-6Df"/>
+                                    <constraint firstAttribute="height" constant="59" id="niD-Jz-jxv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <state key="normal" title="Выбрать таблетку">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="d7W-PL-acT" kind="show" identifier="showSVC" id="7GB-Rh-FCz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы узнали правду" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be0-d3-z0G">
+                                <rect key="frame" x="48" y="510" width="318" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="31P-lz-1es"/>
+                                    <constraint firstAttribute="width" constant="318" id="BJg-Kr-aWZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hGH-Fh-sWC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1cT-Zb-unT"/>
+                            <constraint firstItem="hGH-Fh-sWC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GDr-lb-k1G"/>
+                            <constraint firstItem="hGH-Fh-sWC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IUs-Op-IKH"/>
+                            <constraint firstItem="Avk-Ec-XiC" firstAttribute="top" secondItem="be0-d3-z0G" secondAttribute="bottom" constant="225" id="hbo-1x-uOW"/>
+                            <constraint firstAttribute="bottom" secondItem="hGH-Fh-sWC" secondAttribute="bottom" id="lW4-r7-sbb"/>
+                            <constraint firstItem="be0-d3-z0G" firstAttribute="centerX" secondItem="hGH-Fh-sWC" secondAttribute="centerX" id="lgs-Nj-kB4"/>
+                            <constraint firstItem="Avk-Ec-XiC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="qyw-qL-s82"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Avk-Ec-XiC" secondAttribute="bottom" constant="23" id="s6d-IZ-cPM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Avk-Ec-XiC" secondAttribute="trailing" constant="50" id="v43-QL-djx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainimage" destination="hGH-Fh-sWC" id="Adg-SR-X7N"/>
+                        <outlet property="result" destination="be0-d3-z0G" id="6Vb-ll-6e9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="93.75"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="vu1-p5-5RZ">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" id="d7W-PL-acT" customClass="SecondViewController" customModule="ClosuresDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pbA-9A-t7v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-0b-uH4">
+                                <rect key="frame" x="51" y="241" width="321" height="64"/>
+                                <color key="backgroundColor" red="0.89000000000000001" green="0.16802460159999999" blue="0.059222264640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="eAX-U5-d88"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Выбрать красную таблетку">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="redTapped:" destination="d7W-PL-acT" eventType="touchUpInside" id="QZp-8d-f2w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-zW-D02">
+                                <rect key="frame" x="51" y="379" width="321" height="64"/>
+                                <color key="backgroundColor" red="0.084105429689999997" green="0.65761908140000003" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="LTP-d0-3Hd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Выбрать синюю таблетку">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.98431372549999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="blueTapped:" destination="d7W-PL-acT" eventType="touchUpInside" id="6kJ-nq-xb7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UXL-Os-k19"/>
+                        <color key="backgroundColor" red="0.90524106283958072" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LBb-zW-D02" firstAttribute="top" secondItem="iIb-0b-uH4" secondAttribute="bottom" constant="74" id="MFB-Tk-1j2"/>
+                            <constraint firstItem="UXL-Os-k19" firstAttribute="trailing" secondItem="iIb-0b-uH4" secondAttribute="trailing" constant="42" id="OcQ-df-9VW"/>
+                            <constraint firstItem="LBb-zW-D02" firstAttribute="leading" secondItem="UXL-Os-k19" secondAttribute="leading" constant="51" id="Tiq-vy-O24"/>
+                            <constraint firstItem="iIb-0b-uH4" firstAttribute="leading" secondItem="UXL-Os-k19" secondAttribute="leading" constant="51" id="fO1-Jo-hLc"/>
+                            <constraint firstItem="iIb-0b-uH4" firstAttribute="top" secondItem="UXL-Os-k19" secondAttribute="top" constant="241" id="hWe-TT-gmo"/>
+                            <constraint firstItem="UXL-Os-k19" firstAttribute="trailing" secondItem="LBb-zW-D02" secondAttribute="trailing" constant="42" id="hvx-Z1-jmB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FvH-Hf-Bcg"/>
+                    <connections>
+                        <outlet property="blueButton" destination="LBb-zW-D02" id="ejO-M3-TcL"/>
+                        <outlet property="redButton" destination="LBb-zW-D02" id="MVY-Kd-hjD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rtU-tH-euX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714.49275362318849" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="morpheus" width="1920" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
